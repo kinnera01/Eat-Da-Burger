@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <h1>Eat-Da-Burger!</h1>
+  <img src="https://media.giphy.com/media/vUwTQ2xObzg0E/giphy.gif"> {{!--
+  <img id="left" src="http://1.media.collegehumor.cvcdn.com/33/94/c296833d556cf46c714bf5cff593f240.gif"> --}}
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      {{#each burgers}}
+       {{#unless this.devoured}}
+      <div>
+        <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+          <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+        </form>
+      </div>
+      {{/unless}} {{/each}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      {{#each burgers}} {{#if this.devoured}}
+      <div class='burgerEaten'>
+      </div>
+      {{this.burger_name}} {{/if}} {{/each}}
+    </div>
+  </div>
+</div>
+<h2>Add A Burger Option</h2>
+<div class="row">
+  <div class="col s12">
+    <form action="/burgers" method="POST">
+      <input type="text" id="name" name="burger_name" placeholder="Burger">
+      <button type="submit" class="addBurgerButton">Add The Burger</button>
+    </form>
+  </div>
+</div>
