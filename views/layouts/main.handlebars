@@ -4,34 +4,84 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Eat-Da-Burger</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	{{!-- //<link rel="stylesheet" href="../assets/css/style.css" type="text/css" /> --}}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> {{!--
+	<link rel="stylesheet" href="public/css/style.css" type="text/css" /> --}}
+	<link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Finger+Paint|Freckle+Face|Love+Ya+Like+A+Sister" rel="stylesheet">
+
+
 	<script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
 	<style>
-		.jumbotron{
-			height:400px;
-			background-color:yellowgreen
+		body {
+			margin: 20px;
+			background-color: paleturquoise;
 		}
-		img{
-			height:300px;
-			margin-left:500px;
-			margin-top:20px;
+
+		.jumbotron {
+			background-image: url("https://cdn.dribbble.com/users/23537/screenshots/1882213/walking-cheeseburger.gif");
+			height: 250px
 		}
-		h1{
-			margin-top:-40px;
-			margin-left:400px
-		}
-		img#left{
-				float:left;
-			height:300px;
+
+		img {
+			width: auto;
 
 		}
-		body{
-			padding: 0px;	
-			background-image:url(https://media1.tenor.com/images/39f4ec89cd8d29a05d73c2ba6b1f48dd/tenor.gif?itemid=8448323");
+
+		h1 {
+			font-family: 'Black Ops One', cursive;
+			margin-left: 250px;
+			margin-top: -60px;
+			color: red;
+			font-size: 80px;
+		}
+
+		h2 {
+			font-family: 'Love Ya Like A Sister', cursive;
+			color: green;
+			font-size: 30px;
+		}
+
+		div.row {
+			margin: 0px;
+		}
+
+		.list-group-item {
+			border: none;
+
+		}
+
+		li.list-group-item {
+			background: none;
+			font-family: 'Finger Paint', cursive;
+			color: rebeccapurple;
+			font-size: 20px;
+		}
+
+		button {
+			min-width: 100px;
+		}
+
+		.eaten {
+			color: rgb(97, 146, 97);
+		}
+
+		ul.eaten {
+			padding: -40px;
+		}
+
+		#addburger {
+			float: left;
+		}
+
+		#burgernoteaten {
+			float: right;
+		}
+
+		#burgereaten {
+			float: right;
+
 		}
 	</style>
 	{{{ body }}}

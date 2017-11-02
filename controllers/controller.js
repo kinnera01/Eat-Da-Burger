@@ -23,11 +23,11 @@ router.post("/burgers", function(req, res) {
  burgers.create([
     'burger_name' 
   ], [
-    req.body.burger_name,
-   console.log(req.body.burger_name)
+    req.body.burger_name
+ //  console.log(req.body.burger_name)
   ], function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    //res.json({id: result.insertId });
     res.redirect("/");
   });
 });

@@ -51,23 +51,28 @@ var orm = {
     });
   },
   create: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+		// Construct the query string that inserts a single row into the target table
+		var queryString = "INSERT INTO " + table;
+console.log(vals.length);
+		queryString += " (";
+		queryString += cols.toString();
+		queryString += ") ";
+		queryString += "VALUES (";
+		queryString += printQuestionMarks(vals.length);
+		queryString += ") ";
 
-    console.log(queryString);
+		// console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      cb(result);
-    });
-  },
+		// Perform the database query
+		connection.query(queryString, vals, function(err, result) {
+			if (err) {
+				throw err;
+			}
+	// Return results in callback
+			cb(result);
+		});
+	},
+
   // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
