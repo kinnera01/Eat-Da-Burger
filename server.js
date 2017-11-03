@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 // Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
 // Set Handlebars as the view engine
+app.use(express.static("public"));
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
