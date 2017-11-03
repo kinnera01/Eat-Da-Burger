@@ -57,7 +57,7 @@ div {
 }
 footer {
     max-height: 10%;
-    margin-bottom: 0px;
+    margin-bottom: -30px;
 }
 span.grey-text{
     margin-left:400px;
