@@ -1,11 +1,12 @@
 
-🍔 Eat Da Burger!
+# 🍔 Eat Da Burger!
 
-Overview
+A Node, Express, Handlebars, and MySQL burger app that lets users input the names of burgers they'd like to eat... and then devour them! 
 
-A Node, Express, Handlebars, and MySQL burger app that lets users input the names of burgers they'd like to eat... and then devour them! Please check out the launched app on Heroku here! https://kin-burger.herokuapp.com/ 
+# Live
+[ https://kin-burger.herokuapp.com/ ]
 
-Functionality
+## Functionality
 
 Using an home-grown ORM, the app has 3 basic CRUD functions...
 
@@ -20,12 +21,7 @@ Just for Fun
 
 The app also has a random sound effects are played to grieve a devoured burger. This feature uses jQuery click listeners.
 
-
-Screenshots
-Desktop View: 
-
-
-TECHNOLOGY
+## TECHNOLOGY
 • Bootstrap
 • express.js
 • node.js
